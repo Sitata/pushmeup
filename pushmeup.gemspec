@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version         = Pushmeup::VERSION
   s.authors         = ["Nicos Karalis"]
   s.email           = ["nicoskaralis@me.com"]
-  
+
   s.homepage        = "https://github.com/NicosKaralis/pushmeup"
   s.summary         = %q{Send push notifications to Apple devices through ANPS and Android devices through GCM}
   s.description     = <<-DESC
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
                       DESC
 
   s.rubyforge_project = "pushmeup"
-  
+
   s.files             = `git ls-files`.split("\n")
   s.test_files        = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables       = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
@@ -28,6 +28,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'httparty'
   s.add_dependency 'json'
+  s.add_dependency 'net-http2', '~> 0.15'
+  s.add_dependency 'jwt', '~> 1.5.6'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
